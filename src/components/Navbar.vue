@@ -35,6 +35,8 @@
   left: 0;
   filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.5));
   z-index: 99;
+  display: block;
+  padding: 0;
 }
 
 
@@ -63,13 +65,13 @@ h3 {
   border: 0;
   border-radius: 15px;
   transition: 0.25s;
-  height: calc(100% - 20px);
+  height: 40px;
   margin-left: 15px;
   margin-right: 15px;
   padding: 7.5px 20px;
   cursor: pointer;
   position: relative;
-  top: 7.5px;
+  top: 5px;
 }
 
 #need-help-btn:hover {
@@ -83,7 +85,7 @@ h3 {
   font-style: normal;
   border: 0;
   border-radius: 15px;
-  height: calc(100% - 15px);
+  height: 40px;
   transition: 0.25s;
   padding: 7.5px 20px;
   align-items:center;
@@ -93,7 +95,7 @@ h3 {
   cursor: pointer;
   position: relative;
   right: 0px;
-  top: 7.5px;
+  top: 5px;
 }
 
 
