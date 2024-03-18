@@ -1,21 +1,23 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/Navbar.vue'
+import '../src/assets/base.css'
 </script>
 
 <template>
-  <header>
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
+  <!-- <header> -->
+    <!-- <Navbar /> -->
+    <!-- <div class="wrapper"> -->
+      <!-- <Navbar /> -->
+<!-- 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-      </nav>
-    </div>
-  </header>
+      </nav> -->
+    <!-- </div> -->
+  <!-- </header> -->
 
-  <RouterView />
+  <Navbar />
+
 </template>
 
 <style scoped>
