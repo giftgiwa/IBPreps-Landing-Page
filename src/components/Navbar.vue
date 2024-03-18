@@ -13,8 +13,13 @@
       IB PREPS
     </h3>
 
-    <button id="need-help-btn">Need help?</button>
-    <button id="interested-btn">I'm interested!</button>
+    <div class="options">
+      <button id="need-help-btn">Need help?</button>
+      <button id="interested-btn">I'm interested!</button>
+    </div>
+
+    <!-- <button id="need-help-btn">Need help?</button>
+    <button id="interested-btn">I'm interested!</button> -->
   </div>
 </template>
 
@@ -28,6 +33,8 @@
   height: 50px;
   top: 0;
   left: 0;
+  filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.5));
+  z-index: 99;
 }
 
 
@@ -37,8 +44,13 @@ h3 {
   font-weight: 700;
   font-style: normal;
   color: white;
-  margin: auto;
-  line-height: 100%;
+  line-height: 50px;
+  margin: 0 15px;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Standard syntax */
+  letter-spacing: .2rem;
 }
 
 #need-help-btn {
@@ -51,8 +63,13 @@ h3 {
   border: 0;
   border-radius: 15px;
   transition: 0.25s;
-  height: calc(100% - 10px);
-
+  height: calc(100% - 20px);
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 7.5px 20px;
+  cursor: pointer;
+  position: relative;
+  top: 7.5px;
 }
 
 #need-help-btn:hover {
@@ -66,10 +83,29 @@ h3 {
   font-style: normal;
   border: 0;
   border-radius: 15px;
-  height: calc(100% - 10px);
-  /* margin: auto 25px; */
-  display: inline-block;
+  height: calc(100% - 15px);
+  transition: 0.25s;
+  padding: 7.5px 20px;
+  align-items:center;
+  box-shadow: 5px rgba(0, 0, 0, 0.5);
+  margin-left: 15px;
+  margin-right: 15px;
+  cursor: pointer;
+  position: relative;
+  right: 0px;
+  top: 7.5px;
 }
 
+
+#interested-btn:hover {
+  background-color: #67e3ff;
+}
+
+.options {
+  display: inline-block;
+  height: auto;
+  position: absolute;
+  right: 0;
+}
 
 </style>

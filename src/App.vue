@@ -5,19 +5,9 @@ import '../src/assets/base.css'
 </script>
 
 <template>
-  <!-- <header> -->
-    <!-- <Navbar /> -->
-    <!-- <div class="wrapper"> -->
-      <!-- <Navbar /> -->
-<!-- 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-      </nav> -->
-    <!-- </div> -->
-  <!-- </header> -->
-
   <Navbar />
 
+  
 </template>
 
 <style scoped>
