@@ -4,17 +4,32 @@
 
 <template>
     <div class="container poppins" id="what-is-ib">
-        <div class="col-md-7 poppins" id="left-column">
+        <div class="row">
+            <div class="col-md-7 poppins" id="left-column">
             <h2>What is IB Preps?</h2>
             <p>
                 <b>IB Preps</b> is the all-in-one platform that empowers IB students with access to study materials and qualified support resources to achieve a high score in the IB Diploma.
             </p>
 
             <div id="interest-form">
-
+                <p class="center">Be the first to try IB Preps!</p>
+                <div class="row">
+                    <div class="col-md-7" id="sub-container">
+                        <input class="col-md-7" placeholder=". . .">
+                    </div>
+                    <div class="col-md-5" id="sub-container">
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </div>
             </div>
 
-        </div>
+            <div class="col-md-5 poppins" id="right-column">
+                <div id="video-placeholder"></div>
+            </div>
+
+            </div>
+        
     </div>
 </template>
 
@@ -24,7 +39,7 @@
 #what-is-ib {
     display: block;
     position: relative;
-    top:50px;
+    top:70px;
 }
 
 h2 {
@@ -46,6 +61,58 @@ p {
 }
 
 #right-column {
+    padding: 10px;
     box-sizing: border-box;
+}
+
+#video-placeholder {
+    height: 200px;
+    /* width: 400px; */
+    background-color: black;
+}
+
+.center {
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+}
+input {
+    width: 100%;
+    height: 100%;
+    border-width: 5px;
+    border: 2px solid var(--outline-primary, #D1E9FF);
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.25s;
+    font-size: 12px;
+}
+
+input:hover {
+    background-color: rgba(225, 225, 225, 0.5);
+}
+
+button {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border-width: 0;
+    background: #1DCBF2;
+    box-shadow: 0px 0px 12.6px 0px rgba(0, 0, 0, 0.25);
+    transition: 0.25s;
+    font-weight: 600;
+    color: #02385C;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #67e3ff;
+}
+
+#interest-form {
+    margin-bottom: 20px;
+}
+
+#sub-container {
+    margin-bottom: 10px;
 }
 </style>

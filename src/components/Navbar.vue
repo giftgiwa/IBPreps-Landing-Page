@@ -90,6 +90,7 @@ h3 {
   padding: 7.5px 20px;
   align-items:center;
   box-shadow: 5px rgba(0, 0, 0, 0.5);
+  color: #02385C;
   margin-left: 15px;
   margin-right: 15px;
   cursor: pointer;
