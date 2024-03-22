@@ -17,9 +17,6 @@
       <button id="need-help-btn">Need help?</button>
       <button id="interested-btn">I'm interested!</button>
     </div>
-
-    <!-- <button id="need-help-btn">Need help?</button>
-    <button id="interested-btn">I'm interested!</button> -->
   </div>
 </template>
 

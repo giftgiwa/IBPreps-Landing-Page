@@ -1,9 +1,13 @@
-@import './base.css';
-
+/* @import './base.css'; */
 #app {
   margin: 0 auto;
   width: 100vw;
   height: auto;
   position: absolute;
   padding: 0;
+  display: block;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
 }

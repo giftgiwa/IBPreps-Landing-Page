@@ -1,35 +1,35 @@
 <script setup>
+import '../assets/main.css'
 
+let emails = ""
 </script>
 
 <template>
     <div class="container poppins" id="what-is-ib">
         <div class="row">
             <div class="col-md-7 poppins" id="left-column">
-            <h2>What is IB Preps?</h2>
-            <p>
-                <b>IB Preps</b> is the all-in-one platform that empowers IB students with access to study materials and qualified support resources to achieve a high score in the IB Diploma.
-            </p>
+                <h2>What is IB Preps?</h2>
+                <p>
+                    <b>IB Preps</b> is the all-in-one platform that empowers IB students with access to study materials and qualified support resources to achieve a high score in the IB Diploma.
+                </p>
 
-            <div id="interest-form">
-                <p class="center">Be the first to try IB Preps!</p>
-                <div class="row">
-                    <div class="col-md-7" id="sub-container">
-                        <input class="col-md-7" placeholder=". . .">
-                    </div>
-                    <div class="col-md-5" id="sub-container">
-                        <button>Submit</button>
+                <div id="interest-form">
+                    <p class="center">Be the first to try IB Preps!</p>
+                    <div class="row">
+                        <div class="col-md-7" id="sub-container">
+                            <input class="col-md-7" placeholder="Email adress">
+                        </div>
+                        <div class="col-md-5" id="sub-container">
+                            <button>Submit</button>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
 
             <div class="col-md-5 poppins" id="right-column">
                 <div id="video-placeholder"></div>
             </div>
-
-            </div>
-        
+        </div>   
     </div>
 </template>
 
@@ -38,8 +38,9 @@
 
 #what-is-ib {
     display: block;
-    position: relative;
-    top:70px;
+    margin-top: 70px;
+    /* position: relative;
+    top:70px; */
 }
 
 h2 {
@@ -51,9 +52,9 @@ p {
     font-size: 14px;
 }
 
-.poppins {
+/* .poppins {
     font-family: "Poppins", sans-serif;
-}
+} */
 
 #left-column {
     padding: 10px;
@@ -110,6 +111,8 @@ button:hover {
 
 #interest-form {
     margin-bottom: 20px;
+    /* margin-left: 20px;
+    margin-right: 20px; */
 }
 
 #sub-container {
