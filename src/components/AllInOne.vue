@@ -86,4 +86,8 @@ h4 {
     width: 100%;
     margin-bottom: 20px;
 }
+
+#right-column {
+    padding-left: 50px;
+}
 </style>
