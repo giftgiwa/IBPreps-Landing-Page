@@ -39,6 +39,8 @@ let emails = ""
 #what-is-ib {
     display: block;
     margin-top: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     /* position: relative;
     top:70px; */
 }
@@ -51,10 +53,6 @@ h2 {
 p {
     font-size: 14px;
 }
-
-/* .poppins {
-    font-family: "Poppins", sans-serif;
-} */
 
 #left-column {
     padding: 10px;

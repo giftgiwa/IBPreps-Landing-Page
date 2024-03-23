@@ -1,6 +1,5 @@
 <script>
 import '../assets/main.css'
-import { FaCheckCircle } from "oh-vue-icons/icons"
 
 // export default {
 //   components: {
@@ -56,8 +55,8 @@ import { FaCheckCircle } from "oh-vue-icons/icons"
     background-color: #E8F7FF;
     display: block;
     position: relative;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 h4 {
