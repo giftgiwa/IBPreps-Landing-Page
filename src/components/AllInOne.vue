@@ -15,7 +15,7 @@ import '../assets/main.css'
         <div class="container">
             <div class="row">
                 <div class="col-md-5" id="left-column">
-                    <img id="stock-img" src="../assets/images/studying_img.png">
+                    <img id="stock-img" src="../assets/images/studying_img.jpg">
                 </div>
                 <div class="col-md-7" id="right-column">
                     <h4 class="poppins">The all-in-one platform to ace the IB Diploma.</h4>
@@ -62,17 +62,18 @@ import '../assets/main.css'
 h4 {
     color: #02385C;
     font-weight: 600;
-    text-align: right;
+    text-align: left;
 }
 
 #access {
-    text-align: right;
+    text-align: left;
 }
 
 .feature-list {
     display: block;
     font-size: 14px;
     margin-bottom: 5px;
+    margin-left: 20px;
 }
 
 .check-icon {

@@ -9,9 +9,11 @@
 
 <template>
   <div class="navbar">
-    <h3>
-      IB PREPS
-    </h3>
+    <div id="logo-container">
+      <img id="logo" src="../assets/images/ib-preps-logo.svg">
+    </div>
+
+    <h3>IB PREPS</h3>
 
     <div class="options">
       <button id="need-help-btn">Need help?</button>
@@ -40,16 +42,16 @@
 h3 {
   display: inline-block;
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
   color: white;
   line-height: 50px;
   margin: 0 15px;
+  margin-left: 55px;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Standard syntax */
-  letter-spacing: .2rem;
 }
 
 #need-help-btn {
@@ -107,5 +109,26 @@ h3 {
   position: absolute;
   right: 0;
 }
+
+#logo-container {
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* margin-right: 5px; */
+}
+
+#logo {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  /* padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5px; */
+}
+
+
 
 </style>

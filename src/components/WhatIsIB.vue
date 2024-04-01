@@ -10,7 +10,10 @@ let emails = ""
             <div class="col-md-7 poppins" id="left-column">
                 <h2>What is IB Preps?</h2>
                 <p>
-                    <b>IB Preps</b> is the all-in-one platform that empowers IB students with access to study materials and qualified support resources to achieve a high score in the IB Diploma.
+                    <b>IB Preps</b> is the all-in-one platform that empowers IB students with access to study materials and qualified support resources to successfully navigate the IB certification and achieve a high score.
+                </p>
+                <p>
+                    Concretely, IB Preps features course content and mock-exams, guidance for essays, group and individual live classes with certified IB teachers, and psychological and vocational support
                 </p>
 
                 <div id="interest-form">
@@ -38,11 +41,10 @@ let emails = ""
 
 #what-is-ib {
     display: block;
-    margin-top: 70px;
+    margin-top: 100px;
     padding-top: 20px;
     padding-bottom: 20px;
-    /* position: relative;
-    top:70px; */
+    margin-bottom: 30px;
 }
 
 h2 {
@@ -52,6 +54,7 @@ h2 {
 
 p {
     font-size: 14px;
+    text-align: left;
 }
 
 #left-column {
@@ -66,8 +69,9 @@ p {
 
 #video-placeholder {
     height: 200px;
-    /* width: 400px; */
     background-color: black;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .center {
