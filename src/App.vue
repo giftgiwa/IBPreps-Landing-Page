@@ -6,8 +6,10 @@ import AllInOne from './components/AllInOne.vue'
 import Benefits from './components/Benefits.vue'
 import BeTheFirst from './components/BeTheFirst.vue'
 import Footer from './components/Footer.vue'
+import NeedHelp from './components/NeedHelp.vue'
 
 import '../src/assets/base.css'
+
 
 </script>
 
@@ -18,6 +20,7 @@ import '../src/assets/base.css'
   <Benefits />
   <BeTheFirst />
   <Footer></Footer>
+  <NeedHelp v-if="showComponent" />
 
   
 </template>

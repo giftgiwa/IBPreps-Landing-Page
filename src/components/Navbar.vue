@@ -1,14 +1,27 @@
-<script setup>
-// defineProps({
-//   msg: {
-//     type: String,
-//     required: true
-//   }
-// })
+<script>
+import { VueElement } from 'vue';
+import NeedHelp from './NeedHelp.vue'
+
+export default {
+  components: {
+    NeedHelp
+  },
+  data() {
+    return {
+      showComponent: false
+    };
+  },
+  methods: {
+    toggleComponent() {
+      this.showComponent = !this.showComponent;
+    }
+  }
+};
+
 </script>
 
 <template>
-  <div class="navbar">
+  <div id="navbar">
     <div id="logo-container">
       <img id="logo" src="../assets/images/ib-preps-logo.svg">
     </div>
@@ -16,8 +29,13 @@
     <h3>IB PREPS</h3>
 
     <div class="options">
-      <button id="need-help-btn">Need help?</button>
+      <button @click="toggleComponent()" id="need-help-btn">
+        Need help?
+      </button>
+
       <button id="interested-btn">I'm interested!</button>
+
+      <div v-if="showComponent">hello world</div>
     </div>
   </div>
 </template>
@@ -25,7 +43,7 @@
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.navbar {
+#navbar {
   position: fixed;
   background: linear-gradient(140deg, #02385C, #2170A6);
   width: 100vw;
@@ -38,7 +56,6 @@
   padding: 0;
 }
 
-
 h3 {
   display: inline-block;
   font-family: "Poppins", sans-serif;
@@ -47,7 +64,7 @@ h3 {
   color: white;
   line-height: 50px;
   margin: 0 15px;
-  margin-left: 55px;
+  margin-left: 65px;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
@@ -98,7 +115,6 @@ h3 {
   top: 5px;
 }
 
-
 #interested-btn:hover {
   background-color: #67e3ff;
 }
@@ -117,18 +133,12 @@ h3 {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* margin-right: 5px; */
 }
 
 #logo {
   width: 40px;
   height: 40px;
   margin: 5px;
-  /* padding: 0;
-  margin-top: 5px;
-  margin-bottom: 5px; */
+  margin-left: 15px;
 }
-
-
-
 </style>
