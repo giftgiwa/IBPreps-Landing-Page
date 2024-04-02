@@ -35,9 +35,12 @@ export default {
 
       <button id="interested-btn">I'm interested!</button>
 
-      <div v-if="showComponent">hello world</div>
+
+
     </div>
   </div>
+
+  <NeedHelp v-if="showComponent"></NeedHelp>
 </template>
 
 <style scoped>

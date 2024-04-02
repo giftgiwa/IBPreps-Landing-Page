@@ -1,7 +1,61 @@
 <script setup>
 import '../assets/main.css'
+import $ from 'jquery'
 
 let emails = ""
+
+$(document).ready(function() {
+    console.log("document ready")
+
+    $("#email-address-1").keypress(function(event) {
+        if (event.which === 13) {
+            $("#submit-button-1").click()
+        }
+    })
+
+    $('#submit-button-1').click(function() {
+        console.log("button clicked")
+
+        let emailAddress = document.getElementById("email-address-1").value
+
+        // fetch("https://ib-prep-project.vercel.app/api/whitelist", {
+        //     method: "POST",
+        //     headers: {
+        //     "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify({
+        //     email: "test1@gmail.com",
+        //     }),
+        // })
+
+        $.ajax({
+            type: "POST",
+            url: "https://ib-prep-project.vercel.app/api/whitelist",                
+            dataType : "json",
+            contentType: "application/json; charset=utf-8",
+            data : JSON.stringify({
+                email: emailAddress,
+            }),
+            success: function(result){
+                console.log(result)
+
+                // clear input field on submit
+                document.getElementById("email-address-1").value = ""
+            },
+            error: function(request, status, error){
+                console.log("Error");
+                console.log(request)
+                console.log(status)
+                console.log(error)
+            }
+        });
+
+
+
+
+    })
+})
+
 </script>
 
 <template>
@@ -20,10 +74,10 @@ let emails = ""
                     <p class="center">Be the first to try IB Preps!</p>
                     <div class="row">
                         <div class="col-md-7" id="sub-container">
-                            <input class="col-md-7" placeholder="Email adress">
+                            <input id="email-address-1" class="col-md-7" placeholder="Email adress">
                         </div>
                         <div class="col-md-5" id="sub-container">
-                            <button>Submit</button>
+                            <button id="submit-button-1">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -55,6 +109,7 @@ h2 {
 p {
     font-size: 14px;
     text-align: left;
+    font-weight: 400;
 }
 
 #left-column {

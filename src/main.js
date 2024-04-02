@@ -14,6 +14,7 @@ import { OiInfinity } from "oh-vue-icons/icons"
 import { RiUserFollowLine } from "oh-vue-icons/icons"
 import { LaPiggyBankSolid } from "oh-vue-icons/icons"
 import { MdLibrarybooksOutlined } from "oh-vue-icons/icons"
+import { MdClose } from "oh-vue-icons/icons";
 
 // add imported icons here
 addIcons(FaCheckCircle)
@@ -23,6 +24,7 @@ addIcons(OiInfinity)
 addIcons(RiUserFollowLine)
 addIcons(LaPiggyBankSolid)
 addIcons(MdLibrarybooksOutlined)
+addIcons(MdClose)
 
 
 const app = createApp(App)

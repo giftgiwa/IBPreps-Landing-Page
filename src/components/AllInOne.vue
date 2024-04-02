@@ -59,10 +59,15 @@ import '../assets/main.css'
     padding-bottom: 50px;
 }
 
+p {
+    font-size: 24px;
+}
+
 h4 {
     color: #02385C;
     font-weight: 600;
     text-align: left;
+    font-size: 36px;
 }
 
 #access {
