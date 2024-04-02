@@ -2,6 +2,8 @@
 import '../assets/main.css'
 import $ from 'jquery'
 
+import video from '../assets/videos/video.mp4'
+
 let emails = ""
 
 $(document).ready(function() {
@@ -81,13 +83,11 @@ $(document).ready(function() {
             </div>
 
             <div class="col-md-5 poppins" id="right-column">
-                <!-- <div id="video-placeholder"></div> -->
-                <!-- insert video here -->
-                <video width="400" height="300" controls>
-                    <source id="video" src="../assets/videos/video.mov" type="video/quicktime">
+                
+                <video width="450" height="350" controls>
+                    <source id="video" :src="video" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-
             </div>
         </div>   
     </div>
@@ -116,7 +116,7 @@ p {
 }
 
 #left-column {
-    padding: 10px;
+    padding: 30px;
     box-sizing: border-box;
 }
 
