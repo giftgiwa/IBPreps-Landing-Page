@@ -28,6 +28,7 @@ $(document).ready(function() {
         //     }),
         // })
 
+        // attempted POST request
         $.ajax({
             type: "POST",
             url: "https://ib-prep-project.vercel.app/api/whitelist",                
@@ -49,10 +50,6 @@ $(document).ready(function() {
                 console.log(error)
             }
         });
-
-
-
-
     })
 })
 
@@ -84,7 +81,13 @@ $(document).ready(function() {
             </div>
 
             <div class="col-md-5 poppins" id="right-column">
-                <div id="video-placeholder"></div>
+                <!-- <div id="video-placeholder"></div> -->
+                <!-- insert video here -->
+                <video width="400" height="300" controls>
+                    <source id="video" src="../assets/videos/video.mov" type="video/quicktime">
+                    Your browser does not support the video tag.
+                </video>
+
             </div>
         </div>   
     </div>
@@ -168,8 +171,6 @@ button:hover {
 
 #interest-form {
     margin-bottom: 20px;
-    /* margin-left: 20px;
-    margin-right: 20px; */
 }
 
 #sub-container {
