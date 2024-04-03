@@ -1,13 +1,9 @@
 <script setup>
 import '../assets/main.css'
 import $ from 'jquery'
-
 import video from '../assets/videos/video.mp4'
 
-let emails = ""
-
 $(document).ready(function() {
-    console.log("document ready")
 
     $("#email-address-1").keypress(function(event) {
         if (event.which === 13) {
@@ -16,21 +12,21 @@ $(document).ready(function() {
     })
 
     $('#submit-button-1').click(function() {
-        console.log("button clicked")
+        // console.log(document.getElementById("submit-button-1").textContent)
 
-        let emailAddress = document.getElementById("email-address-1").value
+        let emailAddress  = document.getElementById("email-address-1").value
 
-        // fetch("https://ib-prep-project.vercel.app/api/whitelist", {
-        //     method: "POST",
-        //     headers: {
-        //     "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify({
-        //     email: "test1@gmail.com",
-        //     }),
-        // })
+        const validateEmail = (email) => {
+            return String(email)
+                .toLowerCase()
+                .match(
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                );
+        };
 
-        // attempted POST request
+        // console.log(validateEmail(emailAddress))
+
+        // POST request
         $.ajax({
             type: "POST",
             url: "https://ib-prep-project.vercel.app/api/whitelist",                
@@ -40,21 +36,24 @@ $(document).ready(function() {
                 email: emailAddress,
             }),
             success: function(result){
-                console.log(result)
-
                 // clear input field on submit
                 document.getElementById("email-address-1").value = ""
+                
+                document.getElementById("submit-button-1").textContent = "Submitted!"
+                document.getElementById("email-address-1").style.borderColor = "#cfffd1"
+
             },
             error: function(request, status, error){
-                console.log("Error");
-                console.log(request)
+                console.log("Error")
+
+                document.getElementById("email-address-1").style.borderColor = "#ffd2cf"
+
                 console.log(status)
                 console.log(error)
             }
         });
     })
 })
-
 </script>
 
 <template>
@@ -83,8 +82,7 @@ $(document).ready(function() {
             </div>
 
             <div class="col-md-5 poppins" id="right-column">
-                
-                <video width="450" height="350" controls>
+                <video controls>
                     <source id="video" :src="video" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -137,15 +135,17 @@ p {
     font-weight: 500;
     font-size: 18px;
 }
+
 input {
     width: 100%;
-    height: 100%;
+    height: 50px;
     border-width: 5px;
     border: 2px solid var(--outline-primary, #D1E9FF);
     border-radius: 10px;
     padding: 10px;
     transition: 0.25s;
     font-size: 12px;
+    outline: none;
 }
 
 input:hover {
@@ -154,7 +154,7 @@ input:hover {
 
 button {
     width: 100%;
-    height: 100%;
+    height: 50px;
     border-radius: 10px;
     border-width: 0;
     background: #1DCBF2;
@@ -175,5 +175,14 @@ button:hover {
 
 #sub-container {
     margin-bottom: 10px;
+}
+
+video {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 100%;
+    height: auto;
 }
 </style>

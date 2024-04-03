@@ -1,5 +1,4 @@
 <script>
-import { VueElement } from 'vue';
 import NeedHelp from './NeedHelp.vue'
 
 export default {

@@ -1,4 +1,61 @@
 <script setup>
+import '../assets/main.css'
+import $ from 'jquery'
+import video from '../assets/videos/video.mp4'
+
+$(document).ready(function() {
+
+    $("#email-address-2").keypress(function(event) {
+        if (event.which === 13) {
+            $("#submit-button-2").click()
+        }
+    })
+
+    $("#submit-button-2").click(function() {
+        // console.log(document.getElementById("submit-button-2").textContent)
+
+        let emailAddress  = document.getElementById("email-address-2").value
+
+        const validateEmail = (email) => {
+            return String(email)
+                .toLowerCase()
+                .match(
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                );
+        };
+
+        // console.log(validateEmail(emailAddress))
+
+        // POST request
+        $.ajax({
+            type: "POST",
+            url: "https://ib-prep-project.vercel.app/api/whitelist",                
+            dataType : "json",
+            contentType: "application/json; charset=utf-8",
+            data : JSON.stringify({
+                email: emailAddress,
+            }),
+            success: function(result){
+                // clear input field on submit
+                document.getElementById("email-address-2").value = ""
+                
+                document.getElementById("submit-button-2").textContent = "Submitted!"
+                document.getElementById("email-address-2").style.borderColor = "#cfffd1"
+
+            },
+            error: function(request, status, error){
+                console.log("Error")
+
+                document.getElementById("email-address-1").style.borderColor = "#ffd2cf"
+
+                console.log(status)
+                console.log(error)
+            }
+        });
+    })
+})
+
+
 </script>
 
 <template>
@@ -8,10 +65,10 @@
         <div class="container" id="interest-form">
             <div class="row">
                 <div class="col-md-7" id="sub-container">
-                    <input class="col-md-7 poppins" placeholder="Email adress">
+                    <input class="col-md-7 poppins" id="email-address-2" placeholder="Email adress">
                 </div>
                 <div class="col-md-5" id="sub-container">
-                    <button>Submit</button>
+                    <button id="submit-button-2">Submit</button>
                 </div>
             </div>
         </div>
@@ -30,13 +87,14 @@
 
 input {
     width: 100%;
-    height: 100%;
+    height: 50px;
     border-width: 5px;
     border: 2px solid var(--outline-primary, #D1E9FF);
     border-radius: 10px;
     padding: 10px;
     transition: 0.25s;
     font-size: 12px;
+    outline: none;
 }
 
 input:hover {
@@ -45,7 +103,7 @@ input:hover {
 
 button {
     width: 100%;
-    height: 100%;
+    height: 50px;
     border-radius: 10px;
     border-width: 0;
     background: #1DCBF2;

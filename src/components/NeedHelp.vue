@@ -1,27 +1,30 @@
+<script setup>
+    
+</script>
+
 <template>
 <div id="need-help">
     <!-- background blur behind pop-up -->
     <div class="poppins" id="popup">
 
-        <div id="exit-button">
-            <!-- MdClose -->
+        <button id="exit-button">
             <v-icon name="md-close" />
-        </div>
+        </button>
         <h2>Contact Us</h2>
 
         <p class="label">Your name</p>
-        <input class="help-field">
+        <input class="contact-form help-field">
 
         <p class="label">Your email</p>
-        <input class="help-field">
+        <input class="contact-form help-field">
 
         <p class="label">Your Reason for Contact</p>
-        <input class="help-field">
+        <input class="contact-form help-field">
 
         <p class="label">Description</p>
-        <input class="help-field" id="description-box">
+        <input class="contact-form help-field" id="description-box">
 
-        <button id="submit-buttom">Submit Request</button>
+        <button id="help-submit-button">Submit Request</button>
 
         <p>or you can call us at (+1)555-555-555</p>
 
@@ -51,7 +54,6 @@
         background-color: white;
         color: black;
         width: 400px;
-        /* height: 500px; */
         position: fixed;
         top: 70px;
         right: 150px;
@@ -79,6 +81,7 @@
         padding: 10px;
         font-size: 14px;
         transition: 0.25s;
+        outline: none;
     }
 
     input:hover {
@@ -89,7 +92,7 @@
         height: 150px;
     }  
 
-    button {
+    #help-submit-button {
         background-color: #1570EF;
         border: 0;
         border-radius: 8px;
@@ -101,13 +104,32 @@
         transition: 0.25s;
     }
 
-    button:hover {
+    #help-submit-button:hover {
         background-color: #5197f9;
     }
+
     p {
         font-weight: 400;
         font-size: 14px;
         margin-top: 10px;
         margin-bottom: 0;
     }
+
+    #exit-button {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        color: rgb(178, 178, 178);
+        background-color: rgb(0, 0, 0, 0);
+        border: 0;
+        border-radius: 10px;
+        transition: 0.25s;
+    }
+
+    #exit-button:hover {
+        background-color: rgba(205, 205, 205, 0.365);
+    }
+
 </style>

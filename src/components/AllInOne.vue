@@ -1,12 +1,6 @@
 <script>
 import '../assets/main.css'
 
-// export default {
-//   components: {
-//     "v-icon": FaCheckCircle
-//   }
-// }
-
 </script>
 
 <template>
@@ -76,7 +70,7 @@ h4 {
 
 .feature-list {
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 5px;
     margin-left: 20px;
 }
