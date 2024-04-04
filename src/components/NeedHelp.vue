@@ -1,5 +1,27 @@
-<script setup>
-    
+<script>
+import $ from 'jquery'
+// import needHelpComponent from "./Navbar.vue"
+
+
+// $(document).ready(function() {
+//     $("#exit-button").click(function() {
+        
+//     })
+// })
+
+export default {
+  data() {
+    return {
+      isVisible: true
+    };
+  },
+  methods: {
+    hideComponent() {
+      this.isVisible = false;
+    }
+  }
+};
+
 </script>
 
 <template>
@@ -7,7 +29,7 @@
     <!-- background blur behind pop-up -->
     <div class="poppins" id="popup">
 
-        <button id="exit-button">
+        <button id="exit-button" @click="toggleComponent()">
             <v-icon name="md-close" />
         </button>
         <h2>Contact Us</h2>

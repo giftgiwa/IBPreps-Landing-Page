@@ -1,7 +1,7 @@
 <script>
 import NeedHelp from './NeedHelp.vue'
 
-export default {
+const needHelpComponent = {
   components: {
     NeedHelp
   },
@@ -15,7 +15,24 @@ export default {
       this.showComponent = !this.showComponent;
     }
   }
-};
+}
+// export default {
+//   components: {
+//     NeedHelp
+//   },
+//   data() {
+//     return {
+//       showComponent: false
+//     };
+//   },
+//   methods: {
+//     toggleComponent() {
+//       this.showComponent = !this.showComponent;
+//     }
+//   }
+// };
+
+export default needHelpComponent
 
 </script>
 
