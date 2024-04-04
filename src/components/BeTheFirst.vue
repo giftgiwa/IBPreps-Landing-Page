@@ -1,7 +1,6 @@
 <script setup>
 import '../assets/main.css'
 import $ from 'jquery'
-import video from '../assets/videos/video.mp4'
 
 $(document).ready(function() {
 
