@@ -1,7 +1,6 @@
 <script setup>
 import '../assets/main.css'
 import $ from 'jquery'
-import video from '../assets/videos/video.mp4'
 import IB_Preps from '../assets/videos/IB_Preps.mp4'
 
 $(document).ready(function() {
