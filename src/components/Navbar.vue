@@ -1,6 +1,7 @@
 <script>
 import NeedHelp from './NeedHelp.vue'
 
+
 const needHelpComponent = {
   components: {
     NeedHelp
@@ -16,21 +17,6 @@ const needHelpComponent = {
     }
   }
 }
-// export default {
-//   components: {
-//     NeedHelp
-//   },
-//   data() {
-//     return {
-//       showComponent: false
-//     };
-//   },
-//   methods: {
-//     toggleComponent() {
-//       this.showComponent = !this.showComponent;
-//     }
-//   }
-// };
 
 export default needHelpComponent
 
@@ -101,8 +87,8 @@ h3 {
   border-radius: 15px;
   transition: 0.25s;
   height: 40px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding: 7.5px 20px;
   cursor: pointer;
   position: relative;
@@ -126,7 +112,7 @@ h3 {
   align-items:center;
   box-shadow: 5px rgba(0, 0, 0, 0.5);
   color: #02385C;
-  margin-left: 15px;
+  margin-left: 10px;
   margin-right: 15px;
   cursor: pointer;
   position: relative;

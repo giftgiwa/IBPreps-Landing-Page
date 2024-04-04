@@ -29,7 +29,7 @@ export default {
     <!-- background blur behind pop-up -->
     <div class="poppins" id="popup">
 
-        <button id="exit-button" @click="toggleComponent()">
+        <button id="exit-button" @click="hideComponent()">
             <v-icon name="md-close" />
         </button>
         <h2>Contact Us</h2>
@@ -69,6 +69,15 @@ export default {
         top: 0;
         left: 0;
         
+    }
+
+    @media screen and (max-width: 700px) {
+        #popup {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
     }
 
     #popup {
