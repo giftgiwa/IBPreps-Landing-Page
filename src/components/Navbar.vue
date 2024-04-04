@@ -86,6 +86,7 @@ h3 {
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Standard syntax */
+  letter-spacing: 3px;
 }
 
 #need-help-btn {
@@ -125,7 +126,7 @@ h3 {
   box-shadow: 5px rgba(0, 0, 0, 0.5);
   color: #02385C;
   margin-left: 10px;
-  margin-right: 15px;
+  margin-right: 30px;
   cursor: pointer;
   position: relative;
   right: 0px;

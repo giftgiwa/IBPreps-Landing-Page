@@ -13,7 +13,7 @@ import '../assets/main.css'
                 </div>
                 <div class="col-md-7" id="right-column">
                     <h4 class="poppins">The all-in-one platform to ace the IB Diploma.</h4>
-                    <p id="access">In <b>IB Preps</b>, you'll gain access to the following:</p>
+                    <p class="poppins" id="access">In <b>IB Preps</b>, you'll gain access to the following:</p>
 
                     <div class="feature-list poppins">
                         <v-icon name="fa-check-circle" />

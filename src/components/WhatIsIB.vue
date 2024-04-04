@@ -95,17 +95,20 @@ $(document).ready(function() {
     display: block;
     margin-top: 100px;
     padding-top: 20px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
+    padding-bottom: 0px;
+
     margin-bottom: 30px;
 }
 
 h2 {
     font-weight: 600;
     color: #02385C;
+    font-size: 36px;
 }
 
 p {
-    font-size: 14px;
+    font-size: 16px;
     text-align: left;
     font-weight: 400;
 }
