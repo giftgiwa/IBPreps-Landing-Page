@@ -1,35 +1,11 @@
-<script>
-import $ from 'jquery'
-// import needHelpComponent from "./Navbar.vue"
 
-
-// $(document).ready(function() {
-//     $("#exit-button").click(function() {
-        
-//     })
-// })
-
-export default {
-  data() {
-    return {
-      isVisible: true
-    };
-  },
-  methods: {
-    hideComponent() {
-      this.isVisible = false;
-    }
-  }
-};
-
-</script>
 
 <template>
 <div id="need-help">
     <!-- background blur behind pop-up -->
     <div class="poppins" id="popup">
 
-        <button id="exit-button" @click="hideComponent()">
+        <button id="exit-button" @click="hideComponent">
             <v-icon name="md-close" />
         </button>
         <h2>Contact Us</h2>
@@ -55,6 +31,19 @@ export default {
 </div>
 </template>
 
+<script>
+import $ from 'jquery'
+
+export default {
+  methods: {
+    hideComponent() {
+      this.$emit('hide');
+    }
+  }
+};
+
+</script>
+
 <style scoped>
 
     h2 {
@@ -68,6 +57,7 @@ export default {
         backdrop-filter: blur(10px);
         top: 0;
         left: 0;
+        /* display: none; */
         
     }
 

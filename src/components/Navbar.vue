@@ -1,27 +1,3 @@
-<script>
-import NeedHelp from './NeedHelp.vue'
-
-
-const needHelpComponent = {
-  components: {
-    NeedHelp
-  },
-  data() {
-    return {
-      showComponent: false
-    };
-  },
-  methods: {
-    toggleComponent() {
-      this.showComponent = !this.showComponent;
-    }
-  }
-}
-
-export default needHelpComponent
-
-</script>
-
 <template>
   <div id="navbar">
     <div id="logo-container">
@@ -31,19 +7,55 @@ export default needHelpComponent
     <h3>IB PREPS</h3>
 
     <div class="options">
-      <button @click="toggleComponent()" id="need-help-btn">
+      <button @click="showInnerComponent" id="need-help-btn">
         Need help?
       </button>
 
       <button id="interested-btn">I'm interested!</button>
-
-
-
     </div>
   </div>
 
-  <NeedHelp v-if="showComponent"></NeedHelp>
+  <NeedHelp v-if="innerComponentVisible" @hide="hideInnerComponent"></NeedHelp>
 </template>
+
+<script>
+import NeedHelp from './NeedHelp.vue'
+import $ from 'jquery'
+
+$(document).ready(function() {
+  $("#interested-btn").click(function() {
+    $('html,body').animate({
+        scrollTop: $("#be-the-first").offset().top},
+        'slow');
+
+    $("#email-address-2").focus()
+  });
+
+})
+
+
+export default {
+  components: {
+    NeedHelp
+  },
+  data() {
+    return {
+      innerComponentVisible: false
+    };
+  },
+  methods: {
+    showInnerComponent() {
+      // console.log("click")
+      this.innerComponentVisible = true;
+    },
+    hideInnerComponent() {
+      this.innerComponentVisible = false;
+      // console.log("click")
+    }
+  }
+};
+</script>
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');

@@ -12,7 +12,6 @@ $(document).ready(function() {
     })
 
     $('#submit-button-1').click(function() {
-        // console.log(document.getElementById("submit-button-1").textContent)
 
         let emailAddress  = document.getElementById("email-address-1").value
 
@@ -23,8 +22,6 @@ $(document).ready(function() {
                 /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                 );
         };
-
-        // console.log(validateEmail(emailAddress))
 
         // POST request
         $.ajax({

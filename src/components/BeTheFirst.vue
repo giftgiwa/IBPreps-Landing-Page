@@ -24,8 +24,6 @@ $(document).ready(function() {
                 );
         };
 
-        // console.log(validateEmail(emailAddress))
-
         // POST request
         $.ajax({
             type: "POST",
