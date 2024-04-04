@@ -2,6 +2,7 @@
 import '../assets/main.css'
 import $ from 'jquery'
 import video from '../assets/videos/video.mp4'
+import IB_Preps from '../assets/videos/IB_Preps.mp4'
 
 $(document).ready(function() {
 
@@ -80,7 +81,7 @@ $(document).ready(function() {
 
             <div class="col-md-5 poppins" id="right-column">
                 <video controls>
-                    <source id="video" :src="video" type="video/mp4">
+                    <source id="video" :src="IB_Preps" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -184,5 +185,11 @@ video {
     display: block;
     width: 100%;
     height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    #what-is-ib {
+        margin-top: 50px;
+    }
 }
 </style>

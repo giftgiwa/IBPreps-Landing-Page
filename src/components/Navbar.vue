@@ -159,4 +159,14 @@ h3 {
   margin: 5px;
   margin-left: 15px;
 }
+
+@media screen and (max-width: 600px) {
+  #need-help-btn {
+    display: none;
+  }
+
+  #interested-btn {
+    margin-right: 15px;
+  }
+}
 </style>

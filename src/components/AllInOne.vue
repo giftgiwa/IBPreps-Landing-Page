@@ -89,4 +89,12 @@ h4 {
 #right-column {
     padding-left: 50px;
 }
+
+@media screen and (max-width: 600px) {
+    /* #what-is-ib {
+        margin-top: 50px;
+    } */
+
+    
+}
 </style>
