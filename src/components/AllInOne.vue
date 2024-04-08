@@ -109,8 +109,6 @@ h4 {
         transform: translate(0, -50%);
         margin-left: 0;
         text-align: center;
-    }
-
-    
+    } 
 }
 </style>

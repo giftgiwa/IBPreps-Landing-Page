@@ -15,13 +15,13 @@ $(document).ready(function() {
 
         let emailAddress  = document.getElementById("email-address-1").value
 
-        const validateEmail = (email) => {
-            return String(email)
-                .toLowerCase()
-                .match(
-                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-                );
-        };
+        // const validateEmail = (email) => {
+        //     return String(email)
+        //         .toLowerCase()
+        //         .match(
+        //         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        //         );
+        // };
 
         // POST request
         $.ajax({
@@ -42,7 +42,7 @@ $(document).ready(function() {
             },
             error: function(request, status, error){
                 console.log("Error")
-
+                
                 document.getElementById("email-address-1").style.borderColor = "#ffd2cf"
 
                 console.log(status)
@@ -62,7 +62,7 @@ $(document).ready(function() {
                     <b>IB Preps</b> is the all-in-one platform that empowers IB students with access to study materials and qualified support resources to successfully navigate the IB certification and achieve a high score.
                 </p>
                 <p>
-                    Concretely, IB Preps features course content and mock-exams, guidance for essays, group and individual live classes with certified IB teachers, and psychological and vocational support
+                    Concretely, IB Preps features course content and mock-exams, guidance for essays, group and individual live classes with certified IB teachers, and psychological and vocational support.
                 </p>
 
                 <div id="interest-form">
@@ -95,9 +95,7 @@ $(document).ready(function() {
     display: block;
     margin-top: 100px;
     padding-top: 20px;
-    /* padding-bottom: 20px; */
     padding-bottom: 0px;
-
     margin-bottom: 30px;
 }
 
