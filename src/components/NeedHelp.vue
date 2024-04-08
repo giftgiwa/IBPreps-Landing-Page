@@ -34,6 +34,16 @@
 <script>
 import $ from 'jquery'
 
+$(document).ready(function () {
+
+    
+
+})
+
+
+
+
+
 export default {
   methods: {
     hideComponent() {

@@ -91,9 +91,25 @@ h4 {
 }
 
 @media screen and (max-width: 600px) {
-    /* #what-is-ib {
-        margin-top: 50px;
-    } */
+
+    h4 {
+        text-align: center;
+    }
+
+    #right-column {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #access {
+        text-align: center;
+    }
+
+    .feature-list {
+        transform: translate(0, -50%);
+        margin-left: 0;
+        text-align: center;
+    }
 
     
 }
