@@ -59,7 +59,7 @@ $(document).ready(function() {
             <div class="col-md-7 poppins" id="left-column">
                 <h2>What is IB Preps?</h2>
                 <p>
-                    <b>IB Preps</b> is the all-in-one platform that empowers IB students with access to study materials and qualified support resources to successfully navigate the IB certification and achieve a high score.
+                    <b>IB Preps is the all-in-one platform that empowers IB students</b> with access to study materials and qualified support resources to successfully navigate the IB certification and achieve a high score.
                 </p>
                 <p>
                     Concretely, IB Preps features course content and mock-exams, guidance for essays, group and individual live classes with certified IB teachers, and psychological and vocational support.

@@ -17,23 +17,23 @@ import '../assets/main.css'
 
                     <div class="feature-list poppins">
                         <v-icon name="fa-check-circle" />
-                        Personalized Help With Explorations
+                        <p class="feature-list-text">Personalized Help With Explorations</p>
                     </div>
                     <div class="feature-list poppins">
                         <v-icon name="fa-check-circle" />
-                        Mock exam practice
+                        <p class="feature-list-text">Mock exam practice</p>
                     </div>
                     <div class="feature-list poppins">
                         <v-icon name="fa-check-circle" />
-                        IB Prep content review and practice exercises
+                        <p class="feature-list-text">IB Prep content review and practice exercises</p>
                     </div>
                     <div class="feature-list poppins">
                         <v-icon name="fa-check-circle" />
-                        Guidance on post-IB opportunities
+                        <p class="feature-list-text">Guidance on post-IB opportunities</p>
                     </div>
                     <div class="feature-list poppins">
                         <v-icon name="fa-check-circle" />
-                        Contact with tutors well-versed in IB content
+                        <p class="feature-list-text">Contact with tutors well-versed in IB content</p>
                     </div>
 
                 </div>
@@ -72,7 +72,7 @@ h4 {
     display: block;
     font-size: 16px;
     margin-bottom: 5px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 .check-icon {
@@ -88,6 +88,15 @@ h4 {
 
 #right-column {
     padding-left: 50px;
+}
+
+.feature-list-text {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 16px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-left: 15px;
 }
 
 @media screen and (max-width: 600px) {

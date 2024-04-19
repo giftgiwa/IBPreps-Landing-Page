@@ -100,8 +100,6 @@ export default {
 
         <button id="help-submit-button">Submit Request</button>
 
-        <p>or you can call us at (+1)555-555-555</p>
-
     </div>
 
 </div>
