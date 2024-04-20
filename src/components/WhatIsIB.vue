@@ -79,10 +79,13 @@ $(document).ready(function() {
             </div>
 
             <div class="col-md-5 poppins" id="right-column">
-                <video controls>
-                    <source id="video" :src="IB_Preps" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <div id="video-container">
+                    <video controls id="video">
+                        <source :src="IB_Preps" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
             </div>
         </div>   
     </div>
@@ -177,16 +180,31 @@ button:hover {
 
 video {
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
     display: block;
     width: 100%;
     height: auto;
 }
 
+#video-container {
+    height: 100%;
+}
+
 @media screen and (max-width: 600px) {
     #what-is-ib {
         margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #video-container {
+        position: relative;
+    }
+
+    #video {
+        transform: translateY(-50%);
+        top: 50%;
     }
 }
 </style>
