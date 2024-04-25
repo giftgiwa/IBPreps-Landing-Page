@@ -2,7 +2,7 @@
     <div id="benefits">
         <h4 class="poppins">The benefits of using our platform! And many more.</h4>
 
-        <div class="container">
+        <div class="container custom-container">
             <!-- top row (save money, learn from high quality, save time) -->
             <div class="row benefits-row poppins">
                 <div class="col-md-3 benefits-entry align-top">
@@ -33,10 +33,9 @@
     padding-bottom: 50px;
 }
 
-/* .benefits-entry {
-    top: 0;
-    position: relative;
-} */
+.benefits-entry {
+    align-items: flex-start;
+}
 
 h4 {
     text-align: center;
@@ -53,12 +52,15 @@ h4 {
     
 }
 
-.benefits-row {
-    align-items: center;
-}
-
 p {
     text-align: center;
     font-weight: 500;
+}
+
+.custom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 </style>
