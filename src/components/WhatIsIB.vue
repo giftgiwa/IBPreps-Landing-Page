@@ -1,7 +1,7 @@
 <script setup>
 import '../assets/main.css'
 import $ from 'jquery'
-import video from '../assets/videos/video.mp4'
+import IB_Preps from '../assets/videos/IB_Preps.mp4'
 
 $(document).ready(function() {
 
@@ -15,13 +15,13 @@ $(document).ready(function() {
 
         let emailAddress  = document.getElementById("email-address-1").value
 
-        const validateEmail = (email) => {
-            return String(email)
-                .toLowerCase()
-                .match(
-                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-                );
-        };
+        // const validateEmail = (email) => {
+        //     return String(email)
+        //         .toLowerCase()
+        //         .match(
+        //         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        //         );
+        // };
 
         // POST request
         $.ajax({
@@ -42,7 +42,7 @@ $(document).ready(function() {
             },
             error: function(request, status, error){
                 console.log("Error")
-
+                
                 document.getElementById("email-address-1").style.borderColor = "#ffd2cf"
 
                 console.log(status)
@@ -59,10 +59,10 @@ $(document).ready(function() {
             <div class="col-md-7 poppins" id="left-column">
                 <h2>What is IB Preps?</h2>
                 <p>
-                    <b>IB Preps</b> is the all-in-one platform that empowers IB students with access to study materials and qualified support resources to successfully navigate the IB certification and achieve a high score.
+                    <b>IB Preps is the all-in-one platform that empowers IB students</b> with access to study materials and qualified support resources to successfully navigate the IB certification and achieve a high score.
                 </p>
                 <p>
-                    Concretely, IB Preps features course content and mock-exams, guidance for essays, group and individual live classes with certified IB teachers, and psychological and vocational support
+                    Concretely, IB Preps features course content and mock-exams, guidance for essays, group and individual live classes with certified IB teachers, and psychological and vocational support.
                 </p>
 
                 <div id="interest-form">
@@ -79,10 +79,13 @@ $(document).ready(function() {
             </div>
 
             <div class="col-md-5 poppins" id="right-column">
-                <video controls>
-                    <source id="video" :src="video" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <div id="video-container">
+                    <video controls id="video">
+                        <source :src="IB_Preps" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
             </div>
         </div>   
     </div>
@@ -95,17 +98,18 @@ $(document).ready(function() {
     display: block;
     margin-top: 100px;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     margin-bottom: 30px;
 }
 
 h2 {
     font-weight: 600;
     color: #02385C;
+    font-size: 36px;
 }
 
 p {
-    font-size: 14px;
+    font-size: 16px;
     text-align: left;
     font-weight: 400;
 }
@@ -176,10 +180,31 @@ button:hover {
 
 video {
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
     display: block;
     width: 100%;
     height: auto;
+}
+
+#video-container {
+    height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    #what-is-ib {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #video-container {
+        position: relative;
+    }
+
+    #video {
+        transform: translateY(-50%);
+        top: 50%;
+    }
 }
 </style>

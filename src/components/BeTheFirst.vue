@@ -1,7 +1,6 @@
 <script setup>
 import '../assets/main.css'
 import $ from 'jquery'
-import video from '../assets/videos/video.mp4'
 
 $(document).ready(function() {
 
@@ -58,7 +57,7 @@ $(document).ready(function() {
 
 <template>
     <div id="be-the-first">
-        <p id="header-form-text">Be the first to try IB Preps!</p>
+        <p id="header-form-text" class="poppins">Be the first to try IB Preps!</p>
 
         <div class="container" id="interest-form">
             <div class="row">

@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
     <div id="benefits">
         <h4 class="poppins">The benefits of using our platform! And many more.</h4>
@@ -26,8 +22,7 @@
                     <p>Study at your convenience with 24/7 platform access</p>
                 </div>
             </div>
-        </div>
-        
+        </div>       
     </div>
 </template>
 

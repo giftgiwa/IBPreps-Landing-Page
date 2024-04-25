@@ -6,9 +6,9 @@
         <div class="container">
             <hr>
             <h4 class="poppins">Questions? Contact us!</h4>
-            <p class="poppins"><a><u>ibprep.24@gmail.com</u></a></p>
+            <p class="poppins"><a target="_blank" href="mailto:ibprep.24@gmail.com"><u>ibprep.24@gmail.com</u></a></p>
 
-            <p id="copyright" class="poppins">IB® is a registered trademark of the International Baccalaureate™. The International Baccalaureate does not endorse nor is it affiliated in any way with IB Prep or any content of this website.</p>
+            <p id="copyright" class="poppins">IB® is a registered trademark of the International Baccalaureate™. The International Baccalaureate does not endorse nor is it affiliated in any way with IB Preps or any content of this website.</p>
         </div>
     </div>
 </template>
@@ -17,7 +17,6 @@
 #footer {
     width: 100vw;
     display: block;
-
 }
 
 p {
@@ -26,7 +25,6 @@ p {
 
 h4 {
     margin-bottom: 10px;
-
 }
 
 #copyright {

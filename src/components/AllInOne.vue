@@ -13,7 +13,7 @@ import '../assets/main.css'
                 </div>
                 <div class="col-md-7" id="right-column">
                     <h4 class="poppins">The all-in-one platform to ace the IB Diploma.</h4>
-                    <p id="access">In <b>IB Preps</b>, you'll gain access to the following:</p>
+                    <p class="poppins" id="access">In <b>IB Preps</b>, you'll gain access to the following:</p>
 
                     <div class="feature-list poppins">
                         <v-icon name="fa-check-circle" />
@@ -33,7 +33,7 @@ import '../assets/main.css'
                     </div>
                     <div class="feature-list poppins">
                         <v-icon name="fa-check-circle" />
-                        Guidance on post-IB opportunities
+                        <p class="feature-list-text">Guidance on post-IB opportunities</p>
                     </div>
 
                 </div>
@@ -72,7 +72,7 @@ h4 {
     display: block;
     font-size: 16px;
     margin-bottom: 5px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 .check-icon {
@@ -88,5 +88,36 @@ h4 {
 
 #right-column {
     padding-left: 50px;
+}
+
+.feature-list-text {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 16px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+
+@media screen and (max-width: 600px) {
+
+    h4 {
+        text-align: center;
+    }
+
+    #right-column {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #access {
+        text-align: center;
+    }
+
+    .feature-list {
+        transform: translate(0, -50%);
+        margin-left: 0;
+        text-align: center;
+    } 
 }
 </style>

@@ -1,4 +1,80 @@
+<script>
+import $ from 'jquery'
 
+$(document).ready(function() {
+
+    document.getElementById("help-submit-button").addEventListener("click", function() {
+        let formItems = document.querySelectorAll(".contact-form")
+        
+        for (let i = 0; i < formItems.length; i++) {
+            if (formItems[i].value == "") { // form incomplete
+                formItems[i].focus()
+                for (let j = 0; j < formItems.length; j++) {
+                    formItems[j].style.borderColor = "#ffd2cf"
+                }
+                break
+            }
+        }
+
+        // form complete - send to database
+        /** data format
+         * {
+                name: string;
+                email: string;
+                reason: string;
+                description: string;
+            } ⁠
+         */
+        let name = document.getElementById("name").textContent
+        let emailAddress = document.getElementById("email").textContent
+        let reasonForContact = document.getElementById("reason").textContent
+        let description = document.getElementById("description-box").textContent
+
+
+        $.ajax({
+            type: "POST",
+            url: "https://ib-prep-project.vercel.app/api/support",                
+            dataType : "json",
+            contentType: "application/json; charset=utf-8",
+            data : JSON.stringify({
+                name: name,
+                email: emailAddress,
+                reason: reasonForContact,
+                description: description
+            }),
+            success: function(result){
+                // clear input fields on successful submission
+                for (let j = 0; j < formItems.length; j++) {
+                    formItems[j].textContent = ""
+                }
+                
+                document.getElementById("help-submit-button").textContent = "Submitted!"
+                document.getElementById("email-address-1").style.borderColor = "#cfffd1"
+
+            },
+            error: function(request, status, error){
+                console.log("Error")
+                
+                document.getElementById("email-address-1").style.borderColor = "#ffd2cf"
+
+                console.log(status)
+                console.log(error)
+            }
+        });
+    })
+
+})
+
+
+export default {
+  methods: {
+    hideComponent() {
+      this.$emit('hide');
+    }
+  }
+};
+
+</script>
 
 <template>
 <div id="need-help">
@@ -11,38 +87,23 @@
         <h2>Contact Us</h2>
 
         <p class="label">Your name</p>
-        <input class="contact-form help-field">
+        <input class="contact-form help-field" id="name">
 
         <p class="label">Your email</p>
-        <input class="contact-form help-field">
+        <input class="contact-form help-field" id="email">
 
         <p class="label">Your Reason for Contact</p>
-        <input class="contact-form help-field">
+        <input class="contact-form help-field" id="reason">
 
         <p class="label">Description</p>
         <input class="contact-form help-field" id="description-box">
 
         <button id="help-submit-button">Submit Request</button>
 
-        <p>or you can call us at (+1)555-555-555</p>
-
     </div>
 
 </div>
 </template>
-
-<script>
-import $ from 'jquery'
-
-export default {
-  methods: {
-    hideComponent() {
-      this.$emit('hide');
-    }
-  }
-};
-
-</script>
 
 <style scoped>
 
@@ -57,8 +118,6 @@ export default {
         backdrop-filter: blur(10px);
         top: 0;
         left: 0;
-        /* display: none; */
-        
     }
 
     @media screen and (max-width: 700px) {
@@ -66,7 +125,6 @@ export default {
             position: relative;
             left: 50%;
             transform: translateX(-50%);
-
         }
     }
 
@@ -80,8 +138,7 @@ export default {
         right: 150px;
         padding: 30px;
         box-sizing: border-box;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 8px 8px 48px 8px rgba(0, 0, 0, 0.08);
-        
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 8px 8px 48px 8px rgba(0, 0, 0, 0.08);   
     }
 
     .label {
@@ -89,7 +146,6 @@ export default {
         text-align:left;
         margin-bottom: 0;
         margin-top: 15px;
-
     }
 
     input {
