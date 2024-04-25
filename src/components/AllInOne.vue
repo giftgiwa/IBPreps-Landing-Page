@@ -17,23 +17,23 @@ import '../assets/main.css'
 
                     <div class="feature-list poppins">
                         <v-icon name="fa-check-circle" />
-                        Personalized Help With Explorations
+                        Mock exams
                     </div>
                     <div class="feature-list poppins">
                         <v-icon name="fa-check-circle" />
-                        Mock exam practice
+                        IB content and exercises
                     </div>
                     <div class="feature-list poppins">
                         <v-icon name="fa-check-circle" />
-                        IB Prep content review and practice exercises
+                        Support of tutors well-versed in IB
+                    </div>
+                    <div class="feature-list poppins">
+                        <v-icon name="fa-check-circle" />
+                        AI idea generator for Internal Assessment
                     </div>
                     <div class="feature-list poppins">
                         <v-icon name="fa-check-circle" />
                         Guidance on post-IB opportunities
-                    </div>
-                    <div class="feature-list poppins">
-                        <v-icon name="fa-check-circle" />
-                        Contact with tutors well-versed in IB content
                     </div>
 
                 </div>

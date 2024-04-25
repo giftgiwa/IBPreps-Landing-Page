@@ -15,6 +15,9 @@ import { RiUserFollowLine } from "oh-vue-icons/icons"
 import { LaPiggyBankSolid } from "oh-vue-icons/icons"
 import { MdLibrarybooksOutlined } from "oh-vue-icons/icons"
 import { MdClose } from "oh-vue-icons/icons";
+// import { LuAtom } from "react-icons/lu";
+import { GiAtom } from "oh-vue-icons/icons";
+import { LaAtomSolid } from 'oh-vue-icons/icons'
 
 // add imported icons here
 addIcons(FaCheckCircle)
@@ -25,6 +28,9 @@ addIcons(RiUserFollowLine)
 addIcons(LaPiggyBankSolid)
 addIcons(MdLibrarybooksOutlined)
 addIcons(MdClose)
+addIcons(GiAtom)
+addIcons(LaAtomSolid)
+
 
 
 const app = createApp(App)

@@ -66,7 +66,7 @@ $(document).ready(function() {
                 </p>
 
                 <div id="interest-form">
-                    <p class="center">Be the first to try IB Preps!</p>
+                    <p class="center">Leave us your email, and be the first to try IB Preps!</p>
                     <div class="row">
                         <div class="col-md-7" id="sub-container">
                             <input id="email-address-1" class="col-md-7" placeholder="Email adress">
