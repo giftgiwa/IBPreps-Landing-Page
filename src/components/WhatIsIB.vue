@@ -180,8 +180,6 @@ button:hover {
 
 video {
     position: relative;
-    /* left: 50%; */
-    /* transform: translateX(-50%); */
     display: block;
     width: 100%;
     height: auto;
