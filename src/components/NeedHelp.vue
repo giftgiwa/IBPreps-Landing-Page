@@ -6,7 +6,7 @@ export default {
     hideComponent() {
       this.$emit('hide');
     },
-    async handleRequest() {
+    async handleRequest(event) {
         console.log("request submitted")
         let formItems = document.querySelectorAll(".contact-form")
         
@@ -29,31 +29,13 @@ export default {
                 description: string;
             } ⁠
          */
-        let name = document.getElementById("name").textContent
-        let emailAddress = document.getElementById("email").textContent
-        let reasonForContact = document.getElementById("reason").textContent
-        let description = document.getElementById("description-box").textContent
+        
+        let name = document.getElementById("name").value
+        let emailAddress = document.getElementById("email").value
+        let reasonForContact = document.getElementById("reason").value
+        let description = document.getElementById("description-box").value
 
 
-        // function(result){
-        //         // clear input fields on successful submission
-        //         for (let j = 0; j < formItems.length; j++) {
-        //             formItems[j].textContent = ""
-        //         }
-                
-        //         document.getElementById("help-submit-button").textContent = "Submitted!"
-        //         document.getElementById("email-address-1").style.borderColor = "#cfffd1"
-
-        //     },
-        //     error: function(request, status, error){
-        //         console.log("Error")
-                
-        //         document.getElementById("email-address-1").style.borderColor = "#ffd2cf"
-
-        //         console.log(status)
-        //         console.log(error)
-        //     }
-        // });
         const response = await fetch(
             "https://ib-prep-project.vercel.app/api/support",
             {
@@ -72,13 +54,25 @@ export default {
 
         const data = await response.json()
         console.log(data)
+        console.log(response.ok)
 
+        if (response.ok) {
+            console.log("submission successful")
+            document.getElementById("help-submit-button").textContent = "Submitted!"
 
+            for (let j = 0; j < formItems.length; j++) {
+                formItems[j].style.value = ""
+                formItems[j].style.borderColor = "#cfffd1"
+            }
+
+        } else {
+            for (let j = 0; j < formItems.length; j++) {
+                formItems[j].style.borderColor = "#ffd2cf"
+            }
+            console.log(error)
+        }
     }
-
-
-  }, 
-  
+  },
 };
 
 </script>
