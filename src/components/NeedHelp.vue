@@ -1,9 +1,13 @@
 <script>
 import $ from 'jquery'
 
-$(document).ready(function() {
-
-    document.getElementById("help-submit-button").addEventListener("click", function() {
+export default {
+  methods: {
+    hideComponent() {
+      this.$emit('hide');
+    },
+    async handleRequest() {
+        console.log("request submitted")
         let formItems = document.querySelectorAll(".contact-form")
         
         for (let i = 0; i < formItems.length; i++) {
@@ -12,7 +16,7 @@ $(document).ready(function() {
                 for (let j = 0; j < formItems.length; j++) {
                     formItems[j].style.borderColor = "#ffd2cf"
                 }
-                break
+                return
             }
         }
 
@@ -31,47 +35,50 @@ $(document).ready(function() {
         let description = document.getElementById("description-box").textContent
 
 
-        $.ajax({
-            type: "POST",
-            url: "https://ib-prep-project.vercel.app/api/support",                
-            dataType : "json",
-            contentType: "application/json; charset=utf-8",
-            data : JSON.stringify({
-                name: name,
-                email: emailAddress,
-                reason: reasonForContact,
-                description: description
-            }),
-            success: function(result){
-                // clear input fields on successful submission
-                for (let j = 0; j < formItems.length; j++) {
-                    formItems[j].textContent = ""
-                }
+        // function(result){
+        //         // clear input fields on successful submission
+        //         for (let j = 0; j < formItems.length; j++) {
+        //             formItems[j].textContent = ""
+        //         }
                 
-                document.getElementById("help-submit-button").textContent = "Submitted!"
-                document.getElementById("email-address-1").style.borderColor = "#cfffd1"
+        //         document.getElementById("help-submit-button").textContent = "Submitted!"
+        //         document.getElementById("email-address-1").style.borderColor = "#cfffd1"
 
-            },
-            error: function(request, status, error){
-                console.log("Error")
+        //     },
+        //     error: function(request, status, error){
+        //         console.log("Error")
                 
-                document.getElementById("email-address-1").style.borderColor = "#ffd2cf"
+        //         document.getElementById("email-address-1").style.borderColor = "#ffd2cf"
 
-                console.log(status)
-                console.log(error)
+        //         console.log(status)
+        //         console.log(error)
+        //     }
+        // });
+        const response = await fetch(
+            "https://ib-prep-project.vercel.app/api/support",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email: emailAddress,
+                    name: name,
+                    reason: reasonForContact,
+                    description: description
+                })
             }
-        });
-    })
+        )
 
-})
+        const data = await response.json()
+        console.log(data)
 
 
-export default {
-  methods: {
-    hideComponent() {
-      this.$emit('hide');
     }
-  }
+
+
+  }, 
+  
 };
 
 </script>
@@ -98,7 +105,8 @@ export default {
         <p class="label">Description</p>
         <input class="contact-form help-field" id="description-box">
 
-        <button id="help-submit-button">Submit Request</button>
+        <!-- <button id="help-submit-button">Submit Request</button> -->
+        <button id="help-submit-button" @click="handleRequest">Submit Request</button>
 
     </div>
 
